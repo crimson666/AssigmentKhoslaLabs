@@ -1,0 +1,54 @@
+<div class="row h100" >
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6 ContinerShadow mb100" style="padding-bottom: 00px;">
+        <!--fomr container--->
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-3">
+                <img src="https://image.flaticon.com/icons/svg/3043/3043514.svg" class="compicon" />
+            </div>
+            <div class="col-sm-5"><p class="mainText pt20 tal">Add Products</p></div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="row h50">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <form action="" class="form row">
+                    <div class="form-group col-sm-12 row">
+                         <label class="form-label col-sm-6" for="Name">Product Name</label>
+                         <input id="Name" name="pname" class="form-input col-sm-6" type="text" placeholder="Enter product Name" [(ngModel)]="product.pName" />
+                    </div>
+                    <div class="form-group col-sm-12 row">
+                        <label class="form-label col-sm-6" for="price">Price</label>
+                        <input id="price" name="price" class="form-input col-sm-6" type="number" placeholder="Enter product Price" [(ngModel)]="product.pPrice" />
+                    </div>
+                    <div class="form-group col-sm-12 row">
+                        <label class="form-label col-sm-6" for="brand">Brand</label>
+                        <input id="brand" name="brand" class="form-input col-sm-6" type="text" placeholder="Enter product Brand" [(ngModel)]="product.pBrand" />
+                        </div>
+                    <div class="form-group col-sm-12 row">
+                        <label class="form-label col-sm-6" for="category">Category</label>
+                        <select  id="category" name="category" class="form-input col-sm-6" type="text" placeholder="Enter product Category" [(ngModel)]="product.pCategory">
+                            <option value="Automatic Watch">Automatic Watch</option>
+                            <option value="Field Watch">Field Watch</option>
+                            <option value="Pilot Watch">Pilot Watch</option>
+                            <option value="Driver Watch">Driver Watch</option>
+                            <option value="Militry Watch">Militry Watch</option>
+                            <option value="Sports Watch">Sports Watch</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-12 row">
+                        <label class="form-label col-sm-6" for="Destription">Destription</label>
+                        <textarea rows="4" cols="50" name="Destription" id="Destription" class="form-input col-sm-6" type="text" placeholder="About the Product" [(ngModel)]="product.pDescription" ></textarea>
+                    </div>
+                </form>
+
+                <button type="button" class="btn btn-outline-success length90p f30 mb20" (click)="AddProduct()">
+                    <i class="fa fa-plus-square" aria-hidden="true"></i>
+                Add Product</button>
+            </div>
+        </div>
+        <div class="col-sm-12 m0 p0 pictabletFooter"></div>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
