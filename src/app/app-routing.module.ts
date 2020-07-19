@@ -8,11 +8,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent
+    component: ProductListComponent
   },
   {
-    path: 'productlist',
-    component: ProductListComponent
+    path: 'HomeComponent',
+    component: HomeComponent
   },
   {
     path: 'inventory',

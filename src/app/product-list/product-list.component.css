@@ -12,8 +12,20 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 .pictabletFooter{
     height:10px;border-radius: 00px 00px 10px 10px;background-color: #007bff;
+}
+.CustopAddButton{
+    border-radius:20px !important;
+}
+.headerBar{
+    background-color: #007bff;
+    color:#ffff;
+}
+.BelowheaderBar{
+    background-color: #fff;
+    color:#616161;
 }

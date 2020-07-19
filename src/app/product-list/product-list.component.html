@@ -1,53 +1,32 @@
+<div class="row m0 headerBar pt10 pb10">
+    <div class="col-md-3 f30 pl40"><span class="fontLobster"><i class="fa fa-star" aria-hidden="true"></i> &nbsp; StarBazar</span></div>
+    <div class="col-md-6"></div>
+    <div class="col-md-3 f30"><span  style="float:right"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</span></div>
+</div>
+<div class="row m0 BelowheaderBar pt10 pb10">
+    <div class="col-md-9"></div>
+    <div class="col-md-1 m0 p0 f20" (click)="sort()"><span class="fr curserPointer hvcolor"><i class="fa fa-sort" aria-hidden="true"></i> Sort</span></div>
+    <div class="col-md-1 m0 p0 f20 curserPointer"><span class="fr curserPointer hvcolor "><i class="fa fa-filter" aria-hidden="true"></i> Filter</span></div>
+</div>
 <div class="row m0">
-    <div class="col-sm-3 m0 p0">
+    <div class="col-sm-3 m0 p0" *ngFor="let product of ProductDataList">
         <div class="productTablet p0">
             <div class="row p0 m0">
                 <div class="col-sm-12 m0 p0 h200px">
-                    <img class="pictablet" src="https://rukminim1.flixcart.com/image/495/594/js6e1e80/watch/y/z/r/av-4064-02-avi-8-original-imafdt8kkbkdup8x.jpeg?q=50"
-                    onerror="this.src='https://img.freepik.com/free-vector/no-data-concept-illustration_114360-626.jpg?size=626&ext=jpg'" />
+                    <img class="pictablet" [src]="product.img_url" onerror="this.src='https://grandzcasinohotel.com/wp-content/themes/Divi/includes/builder/images/premade.png'" />
                 </div>
                 <div class="col-sm-12 m0 pl10 pr10 pt10 h200px">
-                    <p class="p0 m0">Watch</p>
-                    <h5>AV-4064-02</h5>
-                    <h4 style="color:#007bff">&#8377; 12,000</h4>
-                    <p>bla bla bla bla bla bla bla bla blabla bla blabla bla bla</p>
+                    <h5>{{product.name}} </h5>
+                    <div class="row p0 m0">
+                    <h4 class="col-sm-4 p0" style="color:#007bff">&#8377; {{ (product.price - (( product.price * product.discount )/100))| number : '1.2-2' }}</h4>
+                    <h5 class="col-sm-2 p0" style="color:#404040;text-decoration: line-through;">{{product.price}}</h5>
+                    <p class="col-sm-4 p0" style="color:#4CAF50;font-size: 17px;font-weight: bold;">{{product.discount}}% off</p>
+                    </div>
+                    <button type="button" class="btn btn-warning CustopAddButton">Add to Cart</button>
+                    <p class="mt10">bla bla bla bla...Description About the Product</p>
                 </div>
                 <div class="col-sm-12 m0 p0 pictabletFooter"></div>
             </div>
         </div> 
     </div>
-
-    <div class="col-sm-3 m0 p0">
-        <div class="productTablet p0">
-            <div class="row p0 m0">
-                <div class="col-sm-12 m0 p0 h200px">
-                    <img class="pictablet" src="https://rukminim1.flixcart.com/image/495/594/k1qr5ow0/watch/u/c/z/av-4011-0h-avi-8-original-imafh99un9kmwfjw.jpeg?q=50" onerror="this.src='https://img.freepik.com/free-vector/no-data-concept-illustration_114360-626.jpg?size=626&ext=jpg'" />
-                </div>
-                <div class="col-sm-12 m0 pl10 pr10 pt10 h200px">
-                    <p class="p0 m0">Watch</p>
-                    <h5>AV-4011-0I </h5>
-                    <h4 style="color:#007bff">&#8377; 12,000</h4>
-                    <p>bla bla bla bla bla bla bla bla blabla bla blabla bla bla</p>
-                </div>
-                <div class="col-sm-12 m0 p0 pictabletFooter"></div>
-            </div>
-        </div> 
-    </div>
-    <div class="col-sm-3 m0 p0" *ngFor="let product of products">
-        <div class="productTablet p0">
-            <div class="row p0 m0">
-                <div class="col-sm-12 m0 p0 h200px">
-                    <img class="pictablet" src="" onerror="this.src='https://grandzcasinohotel.com/wp-content/themes/Divi/includes/builder/images/premade.png'" />
-                </div>
-                <div class="col-sm-12 m0 pl10 pr10 pt10 h200px">
-                    <p class="p0 m0" style="display:inline;float:left;">{{product.pbrand}}&nbsp;&nbsp;&nbsp;</p> <p class="p0 m0" style="color:#007bff;"> {{product.pcategory}}</p>
-                    <h5>{{product.pname}} </h5>
-                    <h4 style="color:#007bff">&#8377; {{product.price}}</h4>
-                    <p>{{product.pdescription}}</p>
-                </div>
-                <div class="col-sm-12 m0 p0 pictabletFooter"></div>
-            </div>
-        </div> 
-    </div>
-
 </div>
